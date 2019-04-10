@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Sails.js Releases
+    </ion-title>
+    <ion-buttons slot="end">  
+      <ion-button (click)="showAlert()" ion-button icon-only>
+        <ion-icon name="help" style="font-size: 24px;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let item of list, let i = index">
+      <ion-card-header>
+        <ion-card-title>Release {{i + 1}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>tagName: {{item.tag_name}}</p>
+        <p>createdAt: {{item.created_at}}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button *ngIf="!list.length" (click)="showReleases()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button *ngIf="list.length" color="danger" (click)="cleanList()">
+      <ion-icon name="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

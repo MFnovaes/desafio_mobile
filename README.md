@@ -44,3 +44,22 @@ Como se não fossem atividades suficientes, ainda realizamos visitas a clientes 
 - Desenvolvimento web utilizando backend em node.js/Sails.js
 
 ## Interessou na vaga? Deixamos um desafio para você mostrar suas habilidades ninjas de programador!
+
+##Compilação do App
+
+- 1) Instale o framework Ionic: 
+   ```
+   npm install -g ionic
+   ```
+- 2) Dentro da pasta desafio_mobile (root), instale as dependencias com o comando:
+   ```
+   npm install
+   ```
+- 3) Ainda na pasta root, caso queira testar o app em um emulador android, rode o comando: 
+   ```
+   ionic cordova emulate android --prod
+   ```
+   Caso queira instalar o app em um dispositivo real, conecte o dispositivo android desejado ao computador via usb e rode o comando: 
+   ```
+   ionic cordova run android --prod
+   ```  

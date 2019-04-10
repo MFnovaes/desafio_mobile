@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tags List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="commentForm" (ngSubmit)="addComment()">
+    <ion-item class="ion-input">  
+      <ion-input formControlName="tagName" type="text" placeholder="tagName (max: 30 characters)"></ion-input>
+    </ion-item>
+    <ion-item class="ion-input">  
+      <ion-input formControlName="comment" type="text" placeholder="Comentário (max: 200 characters)"></ion-input>
+    </ion-item>
+    <div>
+      <ion-button type="submit" [disabled]="!commentForm.valid">Submit</ion-button>
+    </div>
+    
+  </form>
+  
+  <ion-list>
+    <ion-text color="primary">  
+      <h2 *ngIf="commentList.length">Tags</h2>
+    </ion-text>
+    <ion-card *ngFor="let item of commentList, let i = index">
+      <ion-card-header>
+        <ion-card-title>
+          {{item.tagName}}
+          <ion-icon (click)="updateComment(item.id)" name="create" style="color: #3880ff"></ion-icon>
+          <ion-icon (click)="removeComment(item.id, i)" name="trash" style="float: right; font-size: 20px; color: red"></ion-icon>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{item.comment}}</p>
+      </ion-card-content>
+    </ion-card> 
+  </ion-list>
+</ion-content>
