@@ -32,8 +32,8 @@ export class Tab1Page {
 
   async showAlert() {
     const alert = await this.alertCtrl.create({
-      header: "Informarmações do App",
-      message: "Criado por Marcus Felipe Novaes Silva, estudante de Engenharia de Bioprocessos na UNIFEI (Itajubá, MG), para o desafio mobile da empresa IndWise.",
+      header: "Informações do App",
+      message: "Criado por Marcus Felipe Novaes Silva, estudante de Engenharia de Bioprocessos na UNIFEI (Itajubá, MG).",
       buttons: [
         {
           text: "Ok",
