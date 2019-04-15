@@ -1,6 +1,7 @@
 ## O App
 
 - Criado por Marcus Felipe Novaes Silva, estudante de Eng. de Bioprocessos na UNIFEI, Itajubá.
+- Email: mfelipenovaes@gmail.com
 - App desenvolvido com o framework Ionic 4.
 
 
